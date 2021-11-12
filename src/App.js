@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { createContext } from "react";
+// import "./index.css";
+import Game from "./Game";
+import Increment from "./Increment";
+import CurrentTime from "./CurrentTime";
+import DigitalClock from "./DigitalClock";
+import HandlingEvents from "./HandlingEvents";
+import Forms from "./Forms";
+import UpdatedForm from "./UpdatedForm";
+import SpreadForms from "./SpreadFomrs"; // We are using the spread Operator to make form more simple
+import ComponentA from "./Components/ComponentA";
+import UseEffectHook from "./UseEffectHook";
 
-function App() {
+const FirstName = createContext();  //These were used in useContexts
+const LastName = createContext();  // Used in useContext hooks
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <Game/> */}
+      {/* <Increment/> */}
+      {/* <CurrentTime /> */}
+      {/* <DigitalClock /> */}
+      {/* <HandlingEvents /> */}
+      {/* <Forms /> */}
+      {/* <UpdatedForm /> */}
+      {/* <SpreadForms /> */}
+      {/* <FirstName.Provider value={"Gill"}>
+        <LastName.Provider value ={'Karan'}>
+          <ComponentA />
+        </LastName.Provider>
+      </FirstName.Provider> */}
+      <UseEffectHook />
+    </>
   );
-}
+};
 
 export default App;
+export { FirstName, LastName }; // Used in useContext hooks
